@@ -14,7 +14,7 @@ He adaptado el tema para ofrecer una experiencia visual atractiva y coherente pa
 [🚀 Installation](#-installation) •
 [⚡ Features](#-features) •
 [🎨 Usage](#-usage) •
-[💝 Credits](#-credits)
+[📣 Credits](#-credits)
 
 </div>
 
@@ -60,6 +60,7 @@ cp autoload/airline/themes/* ~/.vim/autoload/airline/themes/
 Añade a tu ~/.vimrc:
 
 ```vim
+set termguicolors
 " Configurar el tema
 colorscheme osaka_solarized
 
@@ -69,7 +70,7 @@ let g:airline_theme='solarized_osaka'
 
 
 
-## 💝 Credits
+## 📣 Credits
 Este tema está inspirado en:
 - [Solarized Osaka](https://github.com/craftzdog/solarized-osaka.nvim)
 - [Paleta de Colores](https://www.figma.com/file/6Wp5Puqtz7hbMJgYqOOJzb/Solarized-Osaka?type=design&node-id=0%3A1&mode=design&t=vEaGptGFJOLAafmB-1)
