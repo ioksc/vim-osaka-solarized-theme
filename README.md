@@ -22,6 +22,13 @@ He adaptado el tema para ofrecer una experiencia visual atractiva y coherente pa
 
 <div align="center">
 
+  
+![image](https://github.com/user-attachments/assets/28170716-3727-43c4-850a-4c1c173e838b)
+
+![image](https://github.com/user-attachments/assets/9f3d7f4f-e6a1-43a1-8e33-257ee8381964)
+
+![image](https://github.com/user-attachments/assets/34af57ea-d210-4c1c-9524-b3974aa166be)
+
 
 </div>
 
