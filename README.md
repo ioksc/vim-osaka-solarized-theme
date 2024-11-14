@@ -7,8 +7,8 @@
 ![Maintenance](https://img.shields.io/maintenance/yes/2024?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ioksc/vim-osaka-solarized-theme?style=for-the-badge)
 
-**Este tema para Vim esta inspirado en la paleta de colores de [Solarized Osaka](https://github.com/craftzdog/solarized-osaka.nvim), creado por [craftzdog](https://github.com/craftzdog).**
-He adaptado el tema para ofrecer una experiencia visual atractiva y coherente para Vim, Manteniendo la escencia y estetica del tema original.
+**Este tema para Vim se inspira en la paleta de colores de [Solarized Osaka](https://github.com/craftzdog/solarized-osaka.nvim), creada originalmente por [craftzdog](https://github.com/craftzdog).**
+He adaptado el diseño para proporcionar una experiencia visual consistente y atractiva en Vim, preservando la esencia y estética del tema original.
 
 [📸 Screenshots](#-screenshots) •
 [🚀 Installation](#-installation) •
