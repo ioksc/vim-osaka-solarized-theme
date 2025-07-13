@@ -1,7 +1,7 @@
 " Vim color file
 " Maintainer: ioksc (based on color schema by gh:craftzdog/solarized-osaka.nvim)
 " Last Change: 2025
-" Description: A dark theme inspired by Solarized Osaka with enhanced plugin support, readability, and Go syntax support
+" Description: A dark theme inspired by Solarized Osaka with enhanced plugin support, readability.
 
 set background=dark
 highlight clear
@@ -17,36 +17,36 @@ endif
 let g:colors_name = "osaka_solarized"
 
 " Base Colors
-let s:base03      = "#00141A"  " Fondo más oscuro
-let s:base02      = "#002B36"  " Fondo oscuro secundario
-let s:base01      = "#073642"  " Fondo intermedio
-let s:base00      = "#586E75"  " Gris oscuro
-let s:base0       = "#657B83"  " Gris medio
-let s:base1       = "#9EACAD"  " Gris claro
-let s:base2       = "#ADB8B8"  " Gris más claro
-let s:base3       = "#EEE8D5"  " Fondo claro
-let s:base4       = "#FDF6E3"  " Fondo más claro
-let s:white       = "#FFFFFF"  " Blanco puro
+let s:base03      = "#00141A"
+let s:base02      = "#002B36"
+let s:base01      = "#073642"
+let s:base00      = "#586E75"
+let s:base0       = "#657B83"
+let s:base1       = "#9EACAD"
+let s:base2       = "#ADB8B8"
+let s:base3       = "#EEE8D5"
+let s:base4       = "#FDF6E3"
+let s:white       = "#FFFFFF"
 
 " Accent Colors
-let s:yellow      = "#B58900"  " Amarillo oscuro
-let s:orange      = "#CB4B16"  " Naranja oscuro
-let s:red         = "#DC322F"  " Rojo oscuro
-let s:magenta     = "#D33682"  " Magenta oscuro
-let s:violet      = "#6C71C4"  " Violeta oscuro
-let s:blue        = "#268BD2"  " Azul oscuro
-let s:cyan        = "#2AA198"  " Cian oscuro
-let s:green       = "#859900"  " Verde oscuro
+let s:yellow      = "#B58900"
+let s:orange      = "#CB4B16"
+let s:red         = "#DC322F"
+let s:magenta     = "#D33682"
+let s:violet      = "#6C71C4"
+let s:blue        = "#268BD2"  
+let s:cyan        = "#2AA198"  
+let s:green       = "#859900"  
 
 " Light Variants
-let s:yellow_light  = "#FFE999"  " Amarillo claro
-let s:orange_light  = "#FF9468"  " Naranja claro
-let s:red_light     = "#FF9D9B"  " Rojo claro
-let s:magenta_light = "#FF77B9"  " Magenta claro
-let s:violet_light  = "#CCCFFF"  " Violeta claro
-let s:blue_light    = "#AADCFF"  " Azul claro
-let s:cyan_light    = "#B9FFFA"  " Cian claro
-let s:green_light   = "#D6FFAC"  " Verde claro
+let s:yellow_light  = "#FFE999"  
+let s:orange_light  = "#FF9468" 
+let s:red_light     = "#FF9D9B"  
+let s:magenta_light = "#FF77B9"  
+let s:violet_light  = "#CCCFFF"  
+let s:blue_light    = "#AADCFF"  
+let s:cyan_light    = "#B9FFFA"  
+let s:green_light   = "#D6FFAC"  
 
 " Mapeo de colores para terminal (cterm)
 function! s:get_cterm_color(hex)
@@ -165,29 +165,18 @@ let s:lang['typescript'] = [
 let s:lang['go'] = [
     \ ['goFunction',         s:violet,  '', 'bold'],
     \ ['goStatement',        s:orange,  '', 'bold'],
+    \ ['goFormatSpecifier',  s:red_light,   '', 'bold'],
+    \ ['goSimpleParams', s:yellow,    '', ''],
     \ ['goType',             s:yellow,  '', ''],
     \ ['goBuiltins',         s:blue,    '', ''],
     \ ['goString',           s:cyan,    '', ''],
     \ ['goNumber',           s:green,   '', ''],
-    \ ['goOperator',         s:base1,   '', ''],
+    \ ['goOperator',         s:magenta_light,   '', ''],
     \ ['goComment',          s:base0,   '', 'italic'],
     \ ['goPackage',          s:magenta, '', 'italic'],
     \ ['goConstant',         s:green,   '', ''],
     \ ['goDeclaration',      s:orange,  '', 'bold']
     \ ]
-
-" Comentarios para Go
-" goFunction: Funciones
-" goStatement: Palabras clave como if, for, return
-" goType: Tipos como int, string, struct
-" goBuiltins: Funciones integradas como println, make
-" goString: Cadenas de texto
-" goNumber: Números
-" goOperator: Operadores como :=, ==
-" goComment: Comentarios
-" goPackage: Palabras clave como package, import
-" goConstant: Constantes
-" goDeclaration: Declaraciones como var, const
 
 for lang in keys(s:lang)
     for group in s:lang[lang]
