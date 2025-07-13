@@ -1,22 +1,19 @@
-" Author: Enhanced version with Git repository check and split optimization
+" Author: Enhanced version
 " License: MIT
 " Version: 2.1.0
-
 " Color Palette Definition
 let s:palette = {}
 
-" Enhanced Base Colors with better contrast
-let s:base03 = '#001B24'  " Darkened for better contrast
+let s:base03 = '#001B24'
 let s:base02 = '#002B36'
-let s:base01 = '#094959'  " Lightened for better visibility
+let s:base01 = '#094959'
 let s:base00 = '#586E75'
 let s:base1  = '#9EACAD'
-let s:base2  = '#B8C5C5'  " Lightened for better readability
+let s:base2  = '#B8C5C5'
 let s:base3  = '#EEE8D5'
 let s:base4  = '#FDF6E3'
 let s:white  = '#FFFFFF'
 
-" Enhanced Accent Colors
 let s:yellow  = '#B58900'
 let s:orange  = '#CB4B16'
 let s:red     = '#DC322F'
@@ -26,16 +23,15 @@ let s:blue    = '#268BD2'
 let s:cyan    = '#2AA198'
 let s:green   = '#859900'
 
-" Optimized Helper Function
 function! s:rgb2term(color) abort
   return a:color[0] == '#' ? 16 + (('0x' . strpart(a:color, 1, 2)) + 0) / 51 * 36
                           \+ (('0x' . strpart(a:color, 3, 2)) + 0) / 51 * 6
-                          \+ (('0x' . strpart(a:color, 5, 2)) + 0) / 51
-                          \: a:color
+                        \+ (('0x' . strpart(a:color, 5, 2)) + 0) / 51
+                        \: a:color
 endfunction
 
 function! s:create_colors(fg, bg) abort
-  return [a:fg, a:bg, s:rgb2term(a:fg), s:rgb2term(a:bg)]
+    return [a:fg, a:bg, s:rgb2term(a:fg), s:rgb2term(a:bg)]
 endfunction
 
 " Mode Color Definitions with Enhanced Contrast
@@ -125,3 +121,15 @@ let g:gitgutter_cache_time = 1000
 
 " Set Git Status in Airline
 let g:airline_section_b = '%{GitStatus()}'
+
+" Definición de colores para tabline
+let s:TAB_ACTIVE = s:create_colors(s:base03, s:magenta)  " Buffer activo en magenta
+let s:TAB_INACTIVE = s:create_colors(s:base2, s:base01)  " Buffers inactivos con colores originales
+
+" Configurar la paleta de tabline
+let g:airline#themes#solarized_osaka#palette.tabline = {}
+let g:airline#themes#solarized_osaka#palette.tabline.airline_tab = s:TAB_ACTIVE
+let g:airline#themes#solarized_osaka#palette.tabline.airline_tabsel = s:TAB_ACTIVE
+let g:airline#themes#solarized_osaka#palette.tabline.airline_tabtype = s:TAB_INACTIVE
+let g:airline#themes#solarized_osaka#palette.tabline.airline_tabfill = s:create_colors(s:base00, s:base03)
+
