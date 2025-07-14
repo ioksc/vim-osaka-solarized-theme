@@ -4,7 +4,7 @@
 
 ![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](LICENSE)
-![Maintenance](https://img.shields.io/maintenance/yes/2024?style=for-the-badge)
+![Maintenance](https://img.shields.io/maintenance/yes/2025?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ioksc/vim-osaka-solarized-theme?style=for-the-badge)
 
 **Este tema para Vim se inspira en la paleta de colores de [Solarized Osaka](https://github.com/craftzdog/solarized-osaka.nvim), creada originalmente por [craftzdog](https://github.com/craftzdog).**
