@@ -1,20 +1,20 @@
 " Author: Enhanced version
 " License: MIT
 " Version: 2.2.0
-" 
+"
 let s:palette = {}
 
 if &background == 'light'
-    let s:base03 = '#FDF6E3'  
+    let s:base03 = '#FDF6E3'
     let s:base02 = '#EEE8D5'
     let s:base01 = '#93A1A1'
     let s:base00 = '#839496'
     let s:base1  = '#657B83'
     let s:base2  = '#586E75'
-    let s:base3  = '#002B36'  
-    let s:base4  = '#001B24' 
+    let s:base3  = '#002B36'
+    let s:base4  = '#001B24'
 else
-    let s:base03 = '#00212B'  
+    let s:base03 = '#00212B'
     let s:base02 = '#003542'
     let s:base01 = '#094959'
     let s:base00 = '#586E75'
@@ -84,7 +84,7 @@ let g:airline#themes#solarized_osaka#palette.replace = airline#themes#generate_c
 let g:airline#themes#solarized_osaka#palette.command = airline#themes#generate_color_map(s:C1, s:C2, s:C3)
 let g:airline#themes#solarized_osaka#palette.terminal = airline#themes#generate_color_map(s:T1, s:T2, s:T3)
 
-" Colores para split y statusline" 
+" Colores para split y statusline"
 highlight VertSplit guifg=#094959 guibg=#00212B gui=NONE
 highlight StatusLine guifg=#C2CED0 guibg=#00212B gui=NONE
 highlight StatusLineNC guifg=#586E75 guibg=#00212B gui=NONE
@@ -143,7 +143,7 @@ let g:gitgutter_async = 1
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 let g:gitgutter_cache_enabled = 1
-let g:gitgutter_cache_time = 500 
+let g:gitgutter_cache_time = 500
 
 " Configuración de Airline
 let g:airline_section_b = '%{GitStatus()}'
