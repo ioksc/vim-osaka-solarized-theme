@@ -4,6 +4,7 @@
 " Description: A dark theme inspired by Solarized Osaka with enhanced plugin support, readability.
 
 set background=dark
+
 highlight clear
 
 if exists("syntax_on")
@@ -34,19 +35,19 @@ let s:orange      = "#CB4B16"
 let s:red         = "#DC322F"
 let s:magenta     = "#D33682"
 let s:violet      = "#6C71C4"
-let s:blue        = "#268BD2"  
-let s:cyan        = "#2AA198"  
-let s:green       = "#859900"  
+let s:blue        = "#268BD2"
+let s:cyan        = "#2AA198"
+let s:green       = "#859900"
 
 " Light Variants
-let s:yellow_light  = "#FFE999"  
-let s:orange_light  = "#FF9468" 
-let s:red_light     = "#FF9D9B"  
-let s:magenta_light = "#FF77B9"  
-let s:violet_light  = "#CCCFFF"  
-let s:blue_light    = "#AADCFF"  
-let s:cyan_light    = "#B9FFFA"  
-let s:green_light   = "#D6FFAC"  
+let s:yellow_light  = "#FFE999"
+let s:orange_light  = "#FF9468"
+let s:red_light     = "#FF9D9B"
+let s:magenta_light = "#FF77B9"
+let s:violet_light  = "#CCCFFF"
+let s:blue_light    = "#AADCFF"
+let s:cyan_light    = "#B9FFFA"
+let s:green_light   = "#D6FFAC"
 
 " Mapeo de colores para terminal (cterm)
 function! s:get_cterm_color(hex)
@@ -177,7 +178,6 @@ let s:lang['go'] = [
     \ ['goConstant',         s:green,   '', ''],
     \ ['goDeclaration',      s:orange,  '', 'bold']
     \ ]
-
 for lang in keys(s:lang)
     for group in s:lang[lang]
         call call('s:hi', group)
@@ -221,10 +221,14 @@ call s:hi('Conceal',         s:base0,  s:base03, '')          " Texto oculto
 
 " Terminal colors
 let g:terminal_ansi_colors = [
-    \ s:base02, s:red, s:green, s:yellow, s:blue, s:magenta, s:cyan, s:base2,
-    \ s:base03, s:orange, s:green_light, s:yellow_light, s:blue_light,
-    \ s:magenta_light, s:cyan_light, s:white
-\ ]
+    \ '#00141A', '#DC322F', '#859900', '#B58900', '#268BD2', '#D33682', '#2AA198', '#ADB8B8',
+    \ '#002B36', '#CB4B16', '#859900', '#B58900', '#268BD2', '#D33682', '#2AA198', '#FFFFFF'
+\]
+
+" Forzar soporte de colores ANSI-256
+if &term =~ 'xterm' || &term =~ 'screen' || &term =~ 'tmux'
+    set t_Co=256
+endif
 
 " Cleanup
 delfunction s:hi
